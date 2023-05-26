@@ -47,3 +47,15 @@ Dans votre application, les [AppDatabase] besoins de
 [AppDatabase] permet aux autres classes d'accéder facilement aux classes DAO.
 Lorsque vous utilisez une [AppDatabase] classe, vous voulez vous assurer qu'une seule instance de [DB] existe pour éviter
 les conditions de concurrence ou d'autres problèmes potentiels. 
+
+
+# Create the ListAdapter
+Auparavant, lorsque vous utilisiez un [RecyclerView], vous utilisiez un [RecyclerView.Adapter] pour présenter une [static list of data].
+Une alternative pour une [dynamic list of data]  est appelée [ListAdapter]
+[ListAdapter] utilise [AsyncListDiffer] pour déterminer les différences entre une ancienne liste de données et une nouvelle liste de données.
+
+# Flow
+une fonctionnalité Kotlin appelée [flux asynchrone] (souvent simplement appelée flux ) qui permettra 
+au [DAO] d'émettre en continu des données à partir de la base de données.
+Utiliser un flow pour recevoir des mises à jour en direct d'une [databas].
+Si un élément est inséré, mis à jour ou supprimé, le résultat sera renvoyé au fragment.

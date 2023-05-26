@@ -24,7 +24,7 @@ abstract class AppDatabase: RoomDatabase() {
                     .createFromAsset("database/bus_schedule.db")
                     .build()
                 INSTANCE = instance
-                instance
+                return instance
             }
         }
     }
